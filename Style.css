@@ -46,6 +46,24 @@
     color: white;
 
   }
+
+  
+  /* for the sign up page */
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+
+  p {font-size: 24px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+/* end of sign up page */
+
+
+
   .bg-1 h3 {color: #fff;}
   .bg-1 p {font-style: italic;}
   .list-group-item:first-child {

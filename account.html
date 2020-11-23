@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Make A Wish List Account</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="Style.css" rel="stylesheet" type="text/css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#myPage">Make A Wish List</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="login.html">Log-in / Sign up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- TABLE -->
+  <div class="container">
+    <h2>Ana's item list</h2>
+    <p>This is a pre-filled list for Ana's items she wants in her wedding registry</p>                        
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Claimed by</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class = "success">
+            <!-- ^ new code should be green if claimed by someone -->
+          <td><a href="https://www.bestbuy.com/site/crock-pot-cook-carry-programmable-6-quart-slow-cooker
+            -matte-black/6377474.p?skuId=6377474" target="_blank">Crockpot</td> </a>
+          <td>Anna</td>
+        </tr>
+        <tr class = "success">
+        <td><a href="https://www.walmart.com/ip/Magic-Bullet-Mini-Blender-7
+            -Piece-Set-200-Watt-with-Cross-Blade-Silver/433938236" target="_blank">Blender</td> </a>
+          <td>Debbie</td>
+        </tr>
+        <tr class = "danger">
+            <td><a href="https://www.zillow.com/homedetails/29500-Heathercliff-
+                Rd-SPACE-196-Malibu-CA-90265/2079138646_zpid/" target="_blank">New House</td> </a>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SEARCH FOR LISTS HERE -->
+  <div class="container">
+    <h2>Find your list!</h2>
+    <p>Type either the email or phone number of the person you are trying to gift:</p>  
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <ul class="list-group" id="myList">
+      <li class="list-group-item">Ana Phillips</li>
+      <li class="list-group-item">13151719</li>
+      <li class="list-group-item">(760)555-1234</li>
+      <li class="list-group-item">fakeEmail@fake.com</li>
+    </ul>  
+  </div>
+  
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myList li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
+
+
+
+</body>
+</html>
